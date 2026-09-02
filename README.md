@@ -249,24 +249,26 @@ This allows the professional edition to provide more detailed charting without i
 
 ## Numbering Systems
 
-The first supported numbering system will be FDI.
+The initial release will use the Universal Numbering System.
 
-### Permanent Dentition
+### Universal Permanent Dentition
 
-| Upper Right             | Upper Left              |
+| Upper Arch      |                        |
+| --------------- | ---------------------- |
+| 1 2 3 4 5 6 7 8 | 9 10 11 12 13 14 15 16 |
+
+| Lower Arch              |                         |
 | ----------------------- | ----------------------- |
-| 18 17 16 15 14 13 12 11 | 21 22 23 24 25 26 27 28 |
+| 32 31 30 29 28 27 26 25 | 24 23 22 21 20 19 18 17 |
 
-| Lower Right             | Lower Left              |
-| ----------------------- | ----------------------- |
-| 48 47 46 45 44 43 42 41 | 31 32 33 34 35 36 37 38 |
+Future versions are planned to support:
 
-Future versions may support:
-
-* Universal Numbering System
+* FDI notation
 * Palmer notation
 * Primary dentition
 * Mixed dentition
+
+The numbering system is intentionally modeled as a separate concept so additional systems can be introduced without changing the core tooth state model.
 
 ---
 
