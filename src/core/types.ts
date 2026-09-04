@@ -50,6 +50,13 @@ export type ToothId =
     | "LR7"
     | "LR8"
 
+export type DentalArch =
+    | "upper"
+    | "lower";
+
+export type DentalSide =
+    | "right"
+    | "left";
 
 
 export interface Tooth {

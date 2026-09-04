@@ -1,4 +1,4 @@
-import type { NumberingSystem, ToothId } from "./types";
+import type { NumberingSystem, ToothId, DentalArch, DentalSide } from "./types";
 
 export interface ToothDefinition {
     id: ToothId;
@@ -6,8 +6,8 @@ export interface ToothDefinition {
     universal: string;
     fdi: string;
 
-    arch: "upper" | "lower";
-    side: "right" | "left";
+    arch: DentalArch;
+    side: DentalSide;
 
     positionFromMidline: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 }
@@ -15,8 +15,8 @@ export interface ToothDefinition {
 export function getToothNumber(toothId: ToothId, system: NumberingSystem): string {
     const tooth = PERMANENT_TEETH.find(item => item.id == toothId);
 
-    if(!tooth){
-        throw new Error( `Unknown tooth: ${toothId}`);
+    if (!tooth) {
+        throw new Error(`Unknown tooth: ${toothId}`);
     }
 
     return system === "UNIVERSAL" ? tooth.universal : tooth.fdi;
@@ -130,7 +130,7 @@ export const PERMANENT_TEETH: ToothDefinition[] = [
     {
         id: "UL6",
         universal: "14",
-        fdi: "22",
+        fdi: "26",
         arch: "upper",
         side: "left",
         positionFromMidline: 6
@@ -138,7 +138,7 @@ export const PERMANENT_TEETH: ToothDefinition[] = [
     {
         id: "UL7",
         universal: "15",
-        fdi: "23",
+        fdi: "27",
         arch: "upper",
         side: "left",
         positionFromMidline: 7
@@ -146,7 +146,7 @@ export const PERMANENT_TEETH: ToothDefinition[] = [
     {
         id: "UL8",
         universal: "16",
-        fdi: "24",
+        fdi: "28",
         arch: "upper",
         side: "left",
         positionFromMidline: 8
