@@ -5,3 +5,6 @@ export * from "./setNumberingSystem";
 export * from "./setToothStatus";
 export * from "./getTooth";
 export * from "./getTeethByArch";
+export * from "./resetToothStatus";
+export * from "./resetOdontogram";
+export * from "./validators";
